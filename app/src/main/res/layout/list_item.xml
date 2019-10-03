@@ -13,17 +13,17 @@
      limitations under the License.
 --><!-- Layout for a single list item -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_height="88dp" >
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="88dp"
         android:layout_height="88dp"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentLeft="true"/>
 
     <LinearLayout
         android:id="@+id/text_container"
@@ -31,7 +31,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:paddingStart="16dp">
+        android:paddingStart="16dp"
+        android:layout_toRightOf="@id/image">
 
         <TextView
             android:id="@+id/miwok_text_view"
@@ -46,4 +47,12 @@
             android:textStyle="normal"
             tools:text="Default Translation" />
     </LinearLayout>
-</LinearLayout>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_play_arrow_white_24dp"
+        android:layout_marginRight="16dp"/>
+</RelativeLayout>
